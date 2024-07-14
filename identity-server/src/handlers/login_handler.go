@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"identity-server/utilities"
-	"identity-server/variables"
+	"identity-server/src/utilities"
+	"identity-server/src/variables"
 	"net/http"
 	"os"
 
@@ -33,5 +33,5 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusFound)
 		return
 	}
-	utilities.OutputHTML(w, r, "static/login.html")
+	utilities.OutputHTML(w, r, "src/static/login.html")
 }

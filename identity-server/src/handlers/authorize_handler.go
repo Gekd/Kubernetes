@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"identity-server/utilities"
-	"identity-server/variables"
+	"identity-server/src/utilities"
+	"identity-server/src/variables"
 	"net/http"
 	"net/url"
 	"os"

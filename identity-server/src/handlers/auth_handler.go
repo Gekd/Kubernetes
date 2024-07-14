@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"identity-server/utilities"
-	"identity-server/variables"
+	"identity-server/src/utilities"
+	"identity-server/src/variables"
 	"net/http"
 	"os"
 
@@ -25,5 +25,5 @@ func AuthHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	utilities.OutputHTML(w, r, "static/auth.html")
+	utilities.OutputHTML(w, r, "src/static/auth.html")
 }

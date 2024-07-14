@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"encoding/json"
-	"identity-server/utilities"
-	"identity-server/variables"
+	"identity-server/src/utilities"
+	"identity-server/src/variables"
 	"net/http"
 	"os"
 	"time"
