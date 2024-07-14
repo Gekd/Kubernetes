@@ -4,8 +4,8 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"identity-server/handlers"
-	"identity-server/variables"
+	"identity-server/src/handlers"
+	"identity-server/src/variables"
 	"log"
 	"net/http"
 
