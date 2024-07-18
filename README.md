@@ -1,4 +1,4 @@
-# K8s ClusterF\*
+# K8 ClusterF\*
 
 An e-commerce service deployable to a Kubernetes.
 
