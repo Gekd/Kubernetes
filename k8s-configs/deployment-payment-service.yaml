@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: identity-service
+  name: payment-service
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: identity-service
+      app: payment-service
   template:
     metadata:
       labels:
-        app: identity-service
+        app: payment-service
     spec:
       containers:
         - name: identity-service
-          image: chirbard/k8-ecom-identity-service
+          image: chirbard/k8-ecom-payment-service
           ports:
-            - containerPort: 9096
+            - containerPort: 3000
