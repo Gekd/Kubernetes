@@ -2,7 +2,36 @@
 
 An e-commerce service deployable to a Kubernetes.
 
-## Commands
+## Deploy
+
+- start minikube
+- open dashboard
+
+### Apply Configs
+
+#### Apply Directory
+
+```powershell
+kubectl apply -f k8s-configs/
+```
+
+or
+
+#### Apply Serarately
+
+```powershell
+kubectl apply -f .\deployment-identity-service.yaml
+kubectl apply -f .\service-identity-service.yaml
+# etc
+```
+
+### Apply Ingress Config
+
+```
+kubectl apply -f ingress.yaml
+```
+
+## Commands (for debugging and development)
 
 ### Set up Minikube and Open Dashboard
 
@@ -64,28 +93,16 @@ see [[#See Active Services]] to get the external ip
 minikube tunnel
 ```
 
-## Using Dockerhub
+### Using Dockerhub
 
-### Creating Tag
+#### Creating Tag
 
 ```powershell
 docker tag identity-server:latest chirbard/k8-ecom-identity-service:latest
 ```
 
-### Pushing to Hub
+#### Pushing to Hub
 
 ```powershell
 docker push chirbard/k8-ecom-identity-service:latest
-```
-
-## Using Deployment and Service Configurations
-
-- start minikube
-- start docker env
-- open dashboard
-
-```powershell
-kubectl apply -f .\deployment-identity-service.yaml
-kubectl apply -f .\service-identity-service.yaml
-# etc
 ```

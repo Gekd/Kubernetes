@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: order-service
+  name: product-service
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: order-service
+      app: product-service
   template:
     metadata:
       labels:
-        app: order-service
+        app: product-service
     spec:
       containers:
         - name: identity-service
-          image: chirbard/k8-ecom-order-service
+          image: chirbard/k8-ecom-product-service
           ports:
             - containerPort: 3000
