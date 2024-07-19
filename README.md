@@ -1,4 +1,4 @@
-# K8 ClusterF\*
+# K8s ClusterF\*
 
 An e-commerce service deployable to a Kubernetes.
 
@@ -31,12 +31,26 @@ kubectl apply -f .\service-identity-service.yaml
 kubectl apply -f ingress.yaml
 ```
 
+### Get Minikube ip
+
+This ip can be added to hosts file with `local.microservices` (can be configured in `ingerss.yaml`).
+
+```powershell
+minikube ip
+```
+
+Now you can access the service at `http://local.microservices/login`
+
 ## Commands (for debugging and development)
 
-### Set up Minikube and Open Dashboard
+### Set up Minikube, download ingress addon and Open Dashboard
 
 ```powershell
 minikube start
+```
+
+```powershell
+minikube addons enable ingress
 ```
 
 ```powershell

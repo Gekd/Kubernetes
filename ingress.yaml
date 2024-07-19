@@ -6,34 +6,34 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: local.microservices
-    http:
-      paths:
-      - path: /identity-service
-        pathType: Prefix
-        backend:
-          service:
-            name: identity-service
-            port:
-              number: 80
-      - path: /payment-service
-        pathType: Prefix
-        backend:
-          service:
-            name: payment-service
-            port:
-              number: 80
-      - path: /product-service
-        pathType: Prefix
-        backend:
-          service:
-            name: product-service
-            port:
-              number: 80
-      - path: /order-service
-        pathType: Prefix
-        backend:
-          service:
-            name: order-service
-            port:
-              number: 80
+    - host: local.microservices
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: identity-service
+                port:
+                  number: 9096
+          - path: /payment-service
+            pathType: Prefix
+            backend:
+              service:
+                name: payment-service
+                port:
+                  number: 80
+          - path: /product-service
+            pathType: Prefix
+            backend:
+              service:
+                name: product-service
+                port:
+                  number: 80
+          - path: /order-service
+            pathType: Prefix
+            backend:
+              service:
+                name: order-service
+                port:
+                  number: 80
