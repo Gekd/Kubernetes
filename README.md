@@ -17,7 +17,7 @@ kubectl apply -f k8s-configs/
 
 or
 
-#### Apply Serarately
+#### Apply Separately
 
 ```powershell
 kubectl apply -f .\deployment-identity-service.yaml
